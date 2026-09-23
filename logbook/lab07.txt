@@ -1,0 +1,20 @@
+LAB 7 LOGBOOK - Sara Kottawar - e26b07f0709
+SETUP: clang version ??? python3 version ???
+SETUP: clang version 21.0.0  python3 version 3.9.6
+T1: running hello.py created 8  new files
+T1 prediction: ./hello.c will fail and python3 hello.c will fail
+T1: ./hello.c failed because it is not an executable; python3 hello.c failed because it is C code, not Python code
+T1: the extra step in the C workflow is compilation and it produces an executable file
+T1: when I run python3 hello.py the CPU executes the Python interpreter; hello.py is just source code
+T1: hello.c is 45 bytes and hello is 8408 bytes. my guess for why: the C source code is compiled into machine code and the executable contains additional information needed to run the program
+T2: file says hello is hello: Mach-O 64-bit executable arm64 
+T2 prediction: python3 itself is machine code
+T2: python3 is machine code so when I run python3 hello.py the CPU executes python3 and reads hello.py as data
+T2: my string sits at offset 000004a0 inside hello
+T2: hello.py contains only source code; the extra bytes in hello are machine code and executable information
+T2: Ops saw garbage because a text editor was showing machine code as if it were text
+T3 prediction: C will win by about 10x
+T3: C took 0.06 s, Python took 3.30 s, ratio 55x; the contractor's 50x claim is close to this measurement
+T3: for hello the gap was 0.039 s and without the time command I would not have noticed
+T3: on every pass the interpreter had to translate the code; ./sum had that done once before running
+T3: interpretation cost matters when the code runs many times and does not matter when the code runs only a few times

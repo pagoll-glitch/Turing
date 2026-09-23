@@ -1,0 +1,33 @@
+LAB 6 LOGBOOK - <Sara Kottawar> -< E26B07F0709>
+SETUP: my working directory is LAB 6 LOGBOOK
+T1 prediction: I think ls / will show about /Users/sarakottawar/nst/labs/lab06-os-and-filesystem items
+T1: /bin holds [
+bash
+cat
+chmod
+cp
+csh
+dash
+date
+dd
+df 
+T1: /dev holds aes_0
+afsc_type5
+apfs-raw-device.2.0
+auditpipe
+auditsessions
+autofs
+autofs_control
+autofs_homedirmounter
+autofs_notrigger
+autofs_nowait
+T1: / means root directory , ~ means home directory , . means current directory
+T1: the OS groups files by directories 
+T2 prediction: ./deploy will fail  because it does not have execute permission 
+T2 prediction: ./deploy will fail  because it does not have execute permission 
+T2 prediction: appending after u-w will fail because the file is not writable by the owner
+T2: -rw-r--r-- written in numbers is 644
+T2: ./deploy failed at first because didnt had execute permission 
+T2: the new policy needed chmod 744 ?
+-rwxr-x---  1 sarakottawar  staff  36  9 Sep 12:11 deploy
+T3 prediction: ./nst-info will execute because ./ specifies the current directory
